@@ -1,9 +1,9 @@
 class TicTacToe
-  
+
   def initialize(board = nil)
      @board = board || Array.new(9, " ")
   end
-  
+
   WIN_COMBINATIONS = [0,1,2],
     [3,4,5],
     [6,7,8],
@@ -22,8 +22,8 @@ class TicTacToe
   end
 
   def input_to_index(string)
-    string.to_i - 1 
-    
+    string.to_i - 1
+
   end
 
   def move(index, player)
@@ -37,7 +37,7 @@ class TicTacToe
   def valid_move?(index)
     if position_taken?(index) || index > 8 || index < 0
       false
-    else 
+    else
       true
     end
   end
@@ -54,7 +54,7 @@ class TicTacToe
 
   def current_player
     turn_count% 2 == 0 ? "X" : "O"
-  end 
+  end
 
   def turn
     puts "Please enter 1-9:"
